@@ -1,0 +1,11 @@
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi\bin\Debug\TestRBXApi.exe
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi\bin\Debug\TestRBXApi.pdb
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi\bin\Debug\RobloxAPI.dll
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi\bin\Debug\RobloxAPI.pdb
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi\obj\x86\Debug\TestRBXApi.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi\obj\x86\Debug\TestRBXApi.Form1.resources
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi\obj\x86\Debug\TestRBXApi.Properties.Resources.resources
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi\obj\x86\Debug\TestRBXApi.csproj.GenerateResource.Cache
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi\obj\x86\Debug\TestRBXApi.exe
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi\obj\x86\Debug\TestRBXApi.pdb

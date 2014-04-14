@@ -1,0 +1,12 @@
+C:\Users\ADMIN\AppData\Local\Temporary Projects\RobloxAPI\bin\Debug\RobloxAPI.dll
+C:\Users\ADMIN\AppData\Local\Temporary Projects\RobloxAPI\bin\Debug\RobloxAPI.pdb
+C:\Users\ADMIN\AppData\Local\Temporary Projects\RobloxAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ADMIN\AppData\Local\Temporary Projects\RobloxAPI\obj\Debug\RobloxAPI.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\AppData\Local\Temporary Projects\RobloxAPI\obj\Debug\RobloxAPI.dll
+C:\Users\ADMIN\AppData\Local\Temporary Projects\RobloxAPI\obj\Debug\RobloxAPI.pdb
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\RobloxAPI\bin\Debug\RobloxAPI.dll
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\RobloxAPI\bin\Debug\RobloxAPI.pdb
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\RobloxAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\RobloxAPI\obj\Debug\RobloxAPI.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\RobloxAPI\obj\Debug\RobloxAPI.dll
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\RobloxAPI\obj\Debug\RobloxAPI.pdb
