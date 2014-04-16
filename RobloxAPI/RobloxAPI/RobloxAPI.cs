@@ -301,7 +301,6 @@ namespace RobloxAPI
             return Image.FromStream(s);
         }
 
-        [Obsolete("Always returns User with -1, use GetUserById.", true)]
         /// <summary>
         /// Get a user object by username
         /// </summary>
@@ -309,31 +308,23 @@ namespace RobloxAPI
         /// <returns>The user object. Can be A blank user object with id of -1 if user doesn't exist or fails parsing.</returns>
         public static User GetUserByUsername(string username)
         {
-            WebClient c = new WebClient();
-            using(StreamReader reader = new StreamReader(c.OpenRead("http://rproxy.tk/rapi/GetIdByUsername/"+username)))
+            MyWebClient c = new MyWebClient();
+            c.OpenRead("http://roblox.com/User.aspx?username="+username);
+            string id = c.ResponseUri.PathAndQuery.Replace("/User.aspx?ID=", "");
+            Console.WriteLine(id);
+            int i = -1;
+            int.TryParse(id, out i);
+            if (i > 0)
             {
-                if (reader.ReadToEnd() == "-1")
+                return GetUserById(i);
+            }
+            else
+            {
+                return new User()
                 {
-                    return new User()
-                    {
-                        Id = -1,
-                        Username = ""
-                    };
-                }
-                try
-                {
-                    int i = 0;
-                    int.TryParse(reader.ReadToEnd(), out i);
-                    return GetUserById(i);
-                }
-                catch
-                {
-                    return new User()
-                    {
-                        Id = -1,
-                        Username = ""
-                    };
-                }
+                    Id = -1,
+                    Username = ""
+                };
             }
         }
 

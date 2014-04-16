@@ -19,9 +19,17 @@ namespace TestRBXApi_Form.Tests
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int i = 0;
+            int i = -1;
             int.TryParse(textBox1.Text, out i);
-            pictureBox1.Image = RobloxApi.GetUserThumbnail(i, 110, 110);
+            Console.WriteLine(i.ToString());
+            if (i == 0)
+            {
+                pictureBox1.Image = RobloxApi.GetUserByUsername(textBox1.Text).Thumbnail;
+            }
+            else
+            {
+                pictureBox1.Image = RobloxApi.GetUserThumbnail(i, 110, 110);
+            }
         }
     }
 }
