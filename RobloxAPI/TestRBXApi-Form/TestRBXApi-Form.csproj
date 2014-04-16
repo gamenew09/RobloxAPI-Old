@@ -54,6 +54,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\BlurbForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\BlurbForm.Designer.cs">
+      <DependentUpon>BlurbForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\GetPlaces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\GetPlaces.Designer.cs">
+      <DependentUpon>GetPlaces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\MembershipGetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\MembershipGetter.Designer.cs">
+      <DependentUpon>MembershipGetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\PointsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\PointsForm.Designer.cs">
+      <DependentUpon>PointsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tests\UsersThumbnail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +96,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Tests\BlurbForm.resx">
+      <DependentUpon>BlurbForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\GetPlaces.resx">
+      <DependentUpon>GetPlaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\MembershipGetter.resx">
+      <DependentUpon>MembershipGetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\PointsForm.resx">
+      <DependentUpon>PointsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tests\UsersThumbnail.resx">
       <DependentUpon>UsersThumbnail.cs</DependentUpon>
     </EmbeddedResource>

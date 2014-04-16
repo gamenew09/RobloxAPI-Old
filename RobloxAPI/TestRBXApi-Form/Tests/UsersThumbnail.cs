@@ -19,13 +19,9 @@ namespace TestRBXApi_Form.Tests
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int i = 0;
-                int.TryParse(textBox1.Text, out i);
-                pictureBox1.Image = RobloxApi.GetUserThumbnail(i, 110, 110);
-            }
-            catch { MessageBox.Show("Failed to show thumbnail, you might've typed in a username instead of a integer(number)."); }
+            int i = 0;
+            int.TryParse(textBox1.Text, out i);
+            pictureBox1.Image = RobloxApi.GetUserThumbnail(i, 110, 110);
         }
     }
 }

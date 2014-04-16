@@ -6,6 +6,8 @@ using Newtonsoft.Json;
 using System.Net;
 using System.IO;
 using System.Drawing;
+using HtmlAgilityPack;
+using System.Xml.XPath;
 
 namespace RobloxAPI
 {
@@ -48,6 +50,33 @@ namespace RobloxAPI
             Package = 32,
             Plugin = 38
         }
+    #endregion
+
+    #region Extension Methods
+
+        public static class ExtensionMethods
+        {
+
+            public static HtmlNode GetElementByClass(this HtmlDocument node, string className, string eleName)
+            {
+                return node.DocumentNode.Descendants(eleName).Where(d =>
+                    d.Attributes.Contains("class") && d.Attributes["class"].Value.Split(' ').Any(b => b.Equals(className))
+                ).ToArray()[0];
+            }
+
+            public static void LoadFromUri(this HtmlDocument doc, string url)
+            {
+                try
+                {
+                    using (StreamReader reader = new StreamReader(new WebClient().OpenRead(url)))
+                    {
+                        doc.LoadHtml(reader.ReadToEnd());
+                    }
+                }
+                catch { }
+            }
+        }
+
     #endregion
 
     /// <summary>
@@ -272,11 +301,12 @@ namespace RobloxAPI
             return Image.FromStream(s);
         }
 
+        [Obsolete("Always returns User with -1, use GetUserById.", true)]
         /// <summary>
         /// Get a user object by username
         /// </summary>
         /// <param name="username">The username to get the object</param>
-        /// <returns>The user object. Can be null if user doesn't exist or fails parsing.</returns>
+        /// <returns>The user object. Can be A blank user object with id of -1 if user doesn't exist or fails parsing.</returns>
         public static User GetUserByUsername(string username)
         {
             WebClient c = new WebClient();
@@ -284,7 +314,11 @@ namespace RobloxAPI
             {
                 if (reader.ReadToEnd() == "-1")
                 {
-                    return null;
+                    return new User()
+                    {
+                        Id = -1,
+                        Username = ""
+                    };
                 }
                 try
                 {
@@ -292,7 +326,29 @@ namespace RobloxAPI
                     int.TryParse(reader.ReadToEnd(), out i);
                     return GetUserById(i);
                 }
-                catch { return null; }
+                catch
+                {
+                    return new User()
+                    {
+                        Id = -1,
+                        Username = ""
+                    };
+                }
+            }
+        }
+
+        /// <summary>
+        /// Searches Roblox with a query.
+        /// </summary>
+        /// <param name="q">The query</param>
+        /// <returns>Places searched using the query</returns>
+        public static Place[] SearchForPlaces(SearchQuery q)
+        {
+            string url = "http://web.roblox.com/games/list-json?"+q.ToString();
+            WebClient client = new WebClient();
+            using (StreamReader reader = new StreamReader(client.OpenRead(url)))
+            {
+                return JsonConvert.DeserializeObject<Place[]>(reader.ReadToEnd());
             }
         }
 
@@ -311,7 +367,13 @@ namespace RobloxAPI
                     return JsonConvert.DeserializeObject<User>(reader.ReadToEnd());
                 }
             }
-            catch { return null; }
+            catch
+            {
+                return new User()
+                {
+                    Id = -1
+                };
+            }
         }
 
         #endregion

@@ -10,3 +10,10 @@ C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi-Form\o
 C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi-Form\obj\x86\Debug\TestRBXApi-Form.csproj.GenerateResource.Cache
 C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi-Form\obj\x86\Debug\TestRBXApi-Form.exe
 C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi-Form\obj\x86\Debug\TestRBXApi-Form.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\TestRBXApi-Form\obj\x86\Debug\TestRBXApi_Form.Tests.BlurbForm.resources
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\TestRBXApi-Form\bin\Debug\HtmlAgilityPack.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\TestRBXApi-Form\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\TestRBXApi-Form\bin\Debug\HtmlAgilityPack.xml
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\TestRBXApi-Form\obj\x86\Debug\TestRBXApi_Form.Tests.PointsForm.resources
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\TestRBXApi-Form\obj\x86\Debug\TestRBXApi_Form.Tests.GetPlaces.resources
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\TestRBXApi-Form\obj\x86\Debug\TestRBXApi_Form.Tests.MembershipGetter.resources
