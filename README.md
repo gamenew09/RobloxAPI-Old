@@ -6,6 +6,8 @@ This allows you to go into contact with Roblox's API without doing the dirty wor
 Documentation
 ===============
 
+WARNING: Most of the methods do not use async! IT WILL INTTERUPT THE CURRENT THREAD! Use in a seperate thread.
+
 This is not a complete documentation of the API. It's complete in the C# code. You may help with the documentation by creating a pull request.
 
 #### RobloxApi.GetUserById
