@@ -17,3 +17,5 @@ C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\TestRBXApi-Form\b
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\TestRBXApi-Form\obj\x86\Debug\TestRBXApi_Form.Tests.PointsForm.resources
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\TestRBXApi-Form\obj\x86\Debug\TestRBXApi_Form.Tests.GetPlaces.resources
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\TestRBXApi-Form\obj\x86\Debug\TestRBXApi_Form.Tests.MembershipGetter.resources
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\TestRBXApi-Form\obj\x86\Debug\TestRBXApi_Form.Tests.ProductImage.resources
+C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\TestRBXApi-Form\obj\x86\Debug\TestRBXApi_Form.Tests.Leaderboards.resources

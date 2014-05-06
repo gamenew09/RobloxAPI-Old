@@ -4,3 +4,6 @@ C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\RobloxAPI\bin\Rel
 C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\RobloxAPI\obj\Release\RobloxAPI.dll
 C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\RobloxAPI\obj\Release\RobloxAPI.pdb
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\RobloxAPI\obj\Release\RobloxAPI.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\RobloxAPI\bin\Release\HtmlAgilityPack.dll
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\RobloxAPI\bin\Release\HtmlAgilityPack.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\RobloxAPI\bin\Release\HtmlAgilityPack.xml

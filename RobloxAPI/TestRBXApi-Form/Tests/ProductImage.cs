@@ -10,9 +10,9 @@ using RobloxAPI;
 
 namespace TestRBXApi_Form.Tests
 {
-    public partial class UsersThumbnail : Form
+    public partial class ProductImage : Form
     {
-        public UsersThumbnail()
+        public ProductImage()
         {
             InitializeComponent();
         }
@@ -21,17 +21,12 @@ namespace TestRBXApi_Form.Tests
         {
             try
             {
-                int i = -1;
-                int.TryParse(textBox1.Text, out i);
-                Console.WriteLine(i.ToString());
-                if (i != 0)
-                {
-                    pictureBox1.Image = RobloxApi.GetUserById(i).Thumbnail;
-                }
+                int i = int.Parse(textBox1.Text);
+                pictureBox1.Image = RobloxApi.GetThumbnailImage(RobloxApi.GetProductInfo(i), 110, 110);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("An error occured: "+ex.Message);
+                MessageBox.Show("An error occured while getting the image: "+ex.Message);
             }
         }
     }

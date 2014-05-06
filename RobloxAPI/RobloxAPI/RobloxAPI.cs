@@ -57,11 +57,25 @@ namespace RobloxAPI
         public static class ExtensionMethods
         {
 
+            public static HtmlNode GetElementByClass(this HtmlNode node, string className, string eleName)
+            {
+                return node.Descendants(eleName).Where(d =>
+                    d.Attributes.Contains("class") && d.Attributes["class"].Value.Split(' ').Any(b => b.Equals(className))
+                ).ToArray()[0];
+            }
+
             public static HtmlNode GetElementByClass(this HtmlDocument node, string className, string eleName)
             {
                 return node.DocumentNode.Descendants(eleName).Where(d =>
                     d.Attributes.Contains("class") && d.Attributes["class"].Value.Split(' ').Any(b => b.Equals(className))
                 ).ToArray()[0];
+            }
+
+            public static HtmlNode[] GetElementsByClass(this HtmlDocument node, string className, string eleName)
+            {
+                return node.DocumentNode.Descendants(eleName).Where(d =>
+                    d.Attributes.Contains("class") && d.Attributes["class"].Value.Split(' ').Any(b => b.Equals(className))
+                ).ToArray();
             }
 
             public static void LoadFromUri(this HtmlDocument doc, string url)
@@ -80,7 +94,7 @@ namespace RobloxAPI
     #endregion
 
     /// <summary>
-    /// Credit: Roblox for making it and ZMidnight for making part of the web api.
+    /// Credit: Roblox for making it and ZMidnight for making part of the custom ROBLOX web api.
     /// </summary>
     public static class RobloxApi
     {
@@ -88,6 +102,23 @@ namespace RobloxAPI
         private static string ROBLOXAPI_SITE = "http://api.roblox.com/";
 
         #region API Methods
+
+        /// <summary>
+        /// Checks if Roblox's Database is running, usefull for the ROBLOX API.
+        /// </summary>
+        /// <returns>Is roblox's database running.</returns>
+        public static bool IsRobloxDatabaseRunning()
+        {
+            WebClient c = new WebClient();
+            using (StreamReader reader = new StreamReader(c.OpenRead("http://www.roblox.com/HealthMonitor/DBServerDiagnostics.ashx")))
+            {
+                if (reader.ReadToEnd() == "OK")
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
         /// <summary>
         /// Returns the friends based on the user id.
@@ -230,6 +261,28 @@ namespace RobloxAPI
             WebClient c = new WebClient();
             Stream s = c.OpenRead("http://www.roblox.com/Thumbs/Asset.ashx?assetId=" + info.AssetId + "&width=" + width + "&height=" + height);
             return Image.FromStream(s);
+        }
+
+        /// <summary>
+        /// Get's the new ROBLOX Leaderboard that was released on April 21, 2014 which will go away then come back.
+        /// </summary>
+        /// <returns>The leaderboard.</returns>
+        public static Leaderboard GetLeaderboard()
+        {
+            HtmlDocument doc = new HtmlDocument();
+            doc.LoadFromUri("http://web.roblox.com/leaderboards");
+            HtmlNode[] nodes = doc.GetElementsByClass("leaderboards-row", "div");
+            Leaderboard leader = new Leaderboard();
+            leader.TopUsers = new List<User>();
+            foreach (HtmlNode node in nodes)
+            {
+                try
+                {
+                    leader.TopUsers.Add(GetUserByUsername(node.GetElementByClass("roblox-name-column-link", "div").InnerText));
+                }
+                catch { }
+            }
+            return leader;
         }
 
         /// <summary>

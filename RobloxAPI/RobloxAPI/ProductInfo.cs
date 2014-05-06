@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 
 namespace RobloxAPI
 {
-
+ 
     public class ProductInfo
     {
 
@@ -14,9 +15,19 @@ namespace RobloxAPI
         /// </summary>
         public int AssetId { get; set; }
         /// <summary>
-        /// The Id of the Product 0 if it is not a product.
+        /// The Id of the Product 0 if it is not a product or a place.
         /// </summary>
         public int ProductId { get; set; }
+        /// <summary>
+        /// The thumbnail of the product
+        /// </summary>
+        public Image Thumbnail
+        {
+            get
+            {
+                return RobloxApi.GetThumbnailImage(this, 110, 110);
+            }
+        }
         /// <summary>
         /// Name of the Product/Asset
         /// </summary>
@@ -34,10 +45,6 @@ namespace RobloxAPI
         /// The person who created the Asset/Product.
         /// </summary>
         public User Creator { get; set; }
-        /// <summary>
-        /// The image id for the Asset/Product.
-        /// </summary>
-        public int IconImageAssetId { get; set; }
         /// <summary>
         /// Date when the Asset/Product was created.
         /// </summary>

@@ -66,6 +66,12 @@
     <Compile Include="Tests\GetPlaces.Designer.cs">
       <DependentUpon>GetPlaces.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tests\Leaderboards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\Leaderboards.Designer.cs">
+      <DependentUpon>Leaderboards.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tests\MembershipGetter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="Tests\PointsForm.Designer.cs">
       <DependentUpon>PointsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\ProductImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\ProductImage.Designer.cs">
+      <DependentUpon>ProductImage.cs</DependentUpon>
     </Compile>
     <Compile Include="Tests\UsersThumbnail.cs">
       <SubType>Form</SubType>
@@ -102,11 +114,17 @@
     <EmbeddedResource Include="Tests\GetPlaces.resx">
       <DependentUpon>GetPlaces.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tests\Leaderboards.resx">
+      <DependentUpon>Leaderboards.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tests\MembershipGetter.resx">
       <DependentUpon>MembershipGetter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\PointsForm.resx">
       <DependentUpon>PointsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\ProductImage.resx">
+      <DependentUpon>ProductImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\UsersThumbnail.resx">
       <DependentUpon>UsersThumbnail.cs</DependentUpon>

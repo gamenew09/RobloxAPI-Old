@@ -11,7 +11,7 @@ using System.ComponentModel;
 namespace RobloxAPI
 {
 
-    class MyWebClient : WebClient
+    public class MyWebClient : WebClient
     {
         Uri _responseUri;
 
@@ -51,16 +51,16 @@ namespace RobloxAPI
             {
                 RobloxMembershipType type = RobloxMembershipType.None;
                 MyWebClient client = new MyWebClient();
-                client.OpenRead("http://www.roblox.com/Thumbs/BCOverlay.ashx?username=" + Username);
-                switch ("http://web.roblox.com" + client.ResponseUri.AbsolutePath)
+                client.OpenRead(new Uri("http://www.roblox.com/Thumbs/BCOverlay.ashx?username=" + Username));
+                switch (client.ResponseUri.AbsolutePath)
                 {
-                    case "http://web.roblox.com/images/icons/overlay_obcOnly.png":
+                    case "images/icons/overlay_obcOnly.png":
                         type = RobloxMembershipType.OutrageousBuildersClub;
                         break;
-                    case "http://web.roblox.com/images/icons/overlay_tbcOnly.png":
+                    case "images/icons/overlay_tbcOnly.png":
                         type = RobloxMembershipType.TurboBuildersClub;
                         break;
-                    case "http://web.roblox.com/images/icons/overlay_bcOnly.png":
+                    case "images/icons/overlay_bcOnly.png":
                         type = RobloxMembershipType.BuildersClub;
                         break;
                 }
@@ -115,6 +115,19 @@ namespace RobloxAPI
             {
                 return RobloxApi.GetUserFriends(Id);
             }
+        }
+
+        public bool HasAsset(int assetId)
+        {
+            try
+            {
+                WebClient client = new WebClient();
+                using (StreamReader reader = new StreamReader(client.OpenRead("https://api.roblox.com/ownership/hasasset?userId=" + Id + "&assetId=" + assetId)))
+                {
+                    return bool.Parse(reader.ReadToEnd());
+                }
+            }
+            catch { return false; }
         }
 
         /// <summary>
