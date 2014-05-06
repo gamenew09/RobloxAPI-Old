@@ -5,7 +5,7 @@ This allows you to go into contact with Roblox's API without doing the dirty wor
 
 Contribution
 ===============
-Look at the [CONTRIBUTION.md](https://github.com/gamenew09/RobloxAPI/CONTRIBUTION.md)
+Look at the [CONTRIBUTION.md](https://github.com/gamenew09/RobloxAPI/blob/master/README.md)
 
 Documentation
 ===============
