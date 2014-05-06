@@ -3,10 +3,14 @@ CSharpRobloxAPI
 
 This allows you to go into contact with Roblox's API without doing the dirty work.
 
+Contribution
+===============
+Look at the [CONTRIBUTION.md](https://github.com/gamenew09/RobloxAPI/CONTRIBUTION.md)
+
 Documentation
 ===============
 
-WARNING: Most of the methods do not use async! IT WILL INTTERUPT THE CURRENT THREAD! Use in a seperate thread.
+WARNING: Most of the methods do not use async! IT WILL INTTERUPT THE UI THREAD.
 
 This is not a complete documentation of the API. It's complete in the C# code. You may help with the documentation by creating a pull request.
 
