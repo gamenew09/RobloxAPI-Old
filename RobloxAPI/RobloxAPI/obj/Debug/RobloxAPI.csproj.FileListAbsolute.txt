@@ -13,3 +13,10 @@ C:\Users\ADMIN\documents\visual studio 2010\Projects\RobloxAPI\RobloxAPI\obj\Deb
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\RobloxAPI\bin\Debug\HtmlAgilityPack.dll
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\RobloxAPI\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\ADMIN\Documents\Visual Studio 2010\Projects\RobloxAPI\RobloxAPI\bin\Debug\HtmlAgilityPack.xml
+D:\Users\Tyler\Documents\GitHub\RobloxAPI\RobloxAPI\RobloxAPI\bin\Debug\RobloxAPI.dll
+D:\Users\Tyler\Documents\GitHub\RobloxAPI\RobloxAPI\RobloxAPI\bin\Debug\RobloxAPI.pdb
+D:\Users\Tyler\Documents\GitHub\RobloxAPI\RobloxAPI\RobloxAPI\bin\Debug\HtmlAgilityPack.pdb
+D:\Users\Tyler\Documents\GitHub\RobloxAPI\RobloxAPI\RobloxAPI\bin\Debug\HtmlAgilityPack.xml
+D:\Users\Tyler\Documents\GitHub\RobloxAPI\RobloxAPI\RobloxAPI\obj\Debug\RobloxAPI.csprojResolveAssemblyReference.cache
+D:\Users\Tyler\Documents\GitHub\RobloxAPI\RobloxAPI\RobloxAPI\obj\Debug\RobloxAPI.dll
+D:\Users\Tyler\Documents\GitHub\RobloxAPI\RobloxAPI\RobloxAPI\obj\Debug\RobloxAPI.pdb
